@@ -10,7 +10,8 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        rick: resolve(__dirname, 'rick/index.html')
+        rick: resolve(__dirname, 'rick/index.html'),
+        time: resolve(__dirname, 'time/index.html')
       }
     }
   }
