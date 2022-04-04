@@ -4,7 +4,33 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
+<style>
+@keyframes spinner {
+        0% {
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        30% {
+          transform: translate3d(-50%, -50%, 0) rotate(180deg);
+        }
+        60% {
+          transform: translate3d(-50%, -50%, 0) rotate(180deg);
+        }
+        100% {
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+}
+.spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 50vw;
+    margin: auto auto auto auto;
+    animation: 1.5s linear infinite spinner;
+}
+</style>
 <body>
+        <img src="./Villager.webp" alt="" id="spinimage" class="spin">
     <script type="module" src="./time.js"></script>
 </body>
 </html>
