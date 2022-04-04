@@ -6,6 +6,12 @@ QRCode.toCanvas(canvas, 'https://r.cephas.monster/rick/', function (error) {
 })
 let ctx = canvas.getContext("2d")
 // ctx.fillText("hello world",10 ,50)
+document.getElementById('copyBTN').addEventListener("click", ()=>{
+    canvas.toBlob((blob)=>{
+    let item = new ClipboardItem({"image/png": blob})
+    navigator.clipboard.write([item])
+    })
+})
 document.getElementById('downloadBTN').addEventListener("click", ()=>{
     let imgurl = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
     let downloadELE = document.createElement('a')

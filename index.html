@@ -5,6 +5,11 @@
     <link rel="icon" type="image" href="favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rick roll generator</title>
+        <meta property="og:title" content="Rick roll generator" />
+        <meta property="og:url" content="https://r.cephas.monster" />
+        <meta property="og:image:secure_url" content="https://r.cephas.monster/favicon.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:type" content="website"/>
   </head>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Space+Mono&display=swap');
@@ -52,6 +57,9 @@ button::before {
  z-index: -1;
 }
 
+.copyBTN::before {
+ background-image: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+}
 button:hover::before {
  width: 9em;
 }
@@ -62,8 +70,7 @@ button:hover::before {
       <h1>The rick astley never gonner give you up website</h1>
       <h1>the link to the rick roll link is here:
           <br>
-          <h2>redirect to youtube <a href="https://r.cephas.monster/rick/">rick-link</a></h2>
-          <br>
+          <h2>redirect to youtube <a href="https://r.cephas.monster/rick/">link</a></h2>
           <h2>5second then redirect <a href="https://r.cephas.monster/time/">link</a></h2>
 </h1>
             <h1>rick roll qrcode</h1>
@@ -77,6 +84,7 @@ button:hover::before {
             <br>
             <br>
             <button id="downloadBTN">Download</button>            
+            <button id="copyBTN" class="copyBTN">copy</button>            
             <script type="module" src="/qr-gen.js"></script>
 </body>
 </html>
